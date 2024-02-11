@@ -19,12 +19,16 @@ function Section({ title, types }: SectionProps) {
   let sectionTestId;
   if (title.includes("0×")) {
     sectionTestId = "section-0x";
+  } else if (title.includes("1⁄4×")) {
+    sectionTestId = "section-1-4x";
   } else if (title.includes("1⁄2×")) {
     sectionTestId = "section-1-2x";
   } else if (title.includes("1×")) {
     sectionTestId = "section-1x";
   } else if (title.includes("2×")) {
     sectionTestId = "section-2x";
+  } else if (title.includes("4×")) {
+    sectionTestId = "section-4x";
   }
 
   return (

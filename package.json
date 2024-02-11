@@ -10,7 +10,7 @@
     "language-import": "ts-node ./bin/language-import.ts",
     "i18n-scrape": "i18next",
     "upgrade": "npm-check -u",
-    "start": "vite",
+    "start": "vite --host",
     "prebuild": "rimraf dist",
     "typecheck": "tsc -p .",
     "build": "tsc && vite build --mode production",

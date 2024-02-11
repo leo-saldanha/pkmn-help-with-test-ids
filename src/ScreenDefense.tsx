@@ -315,6 +315,7 @@ export function ScreenDefense({
             className={tabClass}
             activeClassName={tabClassActive}
             isActive={() => false}
+            data-testid="option-solo"
           >
             {t("defense.mode.solo")}
           </NavLink>

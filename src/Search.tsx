@@ -46,6 +46,7 @@ export function Search({ updateSearch, search }: SearchProps) {
           updateSearch(event.target.value);
         }}
         ref={ref}
+        data-testid="search-bar"
       />
       <IconClear
         width={iconSize}

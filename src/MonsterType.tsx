@@ -29,6 +29,7 @@ export function MonsterType({ type }: MonsterTypeProps) {
           background: typeColorBG(type),
           borderColor: typeColorBorder(type),
         }}
+        data-testid={ `tag-${type}` }
       >
         {t(`types.${type}`)}
       </div>

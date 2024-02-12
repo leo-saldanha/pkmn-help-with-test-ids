@@ -92,7 +92,7 @@ function Monster({ pokemon }: MonsterProps) {
       <div className="flex flex flex-column flex-row-ns items-center-ns gap2">
         <div className="flex items-center gap2">
           <div className="fg3 mv0 tabular-nums f5">{displayNumber}</div>
-          <h2 className="mv0 f4 flex-auto" id={`${idPrefix}-name`}>
+          <h2 className="mv0 f4 flex-auto" id={`${idPrefix}-name`} data-testid={ `title-${speciesName.toLowerCase()}` }>
             {speciesName}
           </h2>
         </div>
@@ -255,7 +255,7 @@ export function ScreenPokedex({
   }, [params]);
 
   return (
-    <main className="ph3 mt3 center content-narrow">
+    <main className="ph3 mt3 center content-narrow" data-testid="page-pokedex">
       <Search
         search={query}
         updateSearch={(newQuery) => {

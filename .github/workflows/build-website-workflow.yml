@@ -1,4 +1,4 @@
-name: Build pkmn-help-with-test-ids
+name: Build/push pkmn-help-with-test-ids image
 
 env:
   REGISTRY: ghcr.io
@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy-website:
+  push-image:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -29,6 +29,8 @@ jobs:
       - uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=schedule,pattern={{date 'YYYYMMDD-hhmmss'
 
       - uses: docker/build-push-action@f2a1d5e99d037542a71f64918e516c093c6f3fc4
         with:
@@ -36,4 +38,4 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+

@@ -1,4 +1,4 @@
-name: Build/push pkmn-help-with-test-ids image
+name: build-and-push-image-to-ghcr-io
 
 env:
   REGISTRY: ghcr.io
@@ -32,7 +32,7 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
             type=ref,event=branch
-            type=schedule,pattern={{date 'YYYYMMDD-hhmmss'
+            type=schedule,pattern={{date 'YYYYMMDD-hhmmss'}}
 
       - uses: docker/build-push-action@f2a1d5e99d037542a71f64918e516c093c6f3fc4
         with:

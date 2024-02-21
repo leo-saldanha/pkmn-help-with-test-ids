@@ -1,4 +1,4 @@
-name: Build/push pkmn-help-with-test-ids image
+name: build-and-push-image-to-ghcr-io
 
 env:
   REGISTRY: ghcr.io

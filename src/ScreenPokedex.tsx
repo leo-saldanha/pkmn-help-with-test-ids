@@ -88,6 +88,7 @@ function Monster({ pokemon }: MonsterProps) {
         "relative",
         "pa3 br3 bg1 ba border2 button-shadow"
       )}
+      data-testid={ `entry-${pokemon.id}` }
     >
       <div className="flex flex flex-column flex-row-ns items-center-ns gap2">
         <div className="flex items-center gap2">

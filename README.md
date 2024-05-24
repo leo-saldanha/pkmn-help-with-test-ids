@@ -13,6 +13,23 @@ $ npm install
 $ npm start
 ```
 
+## Launch with docker
+
+Build the docker image:
+```
+$ docker build -t ghcr.io/leo-saldanha/pkmn-help-with-test-ids:master .
+```
+
+Get its ID with:
+```
+$ docker image ls
+```
+
+Start the container:
+```
+$ docker run -d image_id
+```
+
 ## Updating Pokédex data
 
 Make sure to delete all the images in `public/img` before running this command or all existing images will be kept
